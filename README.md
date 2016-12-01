@@ -12,6 +12,8 @@ Code accompanying the paper [Gated Attention Reader for Text Comprehension](link
 ## Preprocessed Data
 You can get the preprocessed data files from [here](https://drive.google.com/drive/folders/0B7aCzQIaRTDUZS1EWlRKMmt3OXM?usp=sharing). Extract the tar files to the `data/` directory. Ensure that the symbolic links point to folders with `training/`, `validation/` and `test/` directories for each dataset.
 
+You can also get the pretrained Glove vectors from the above link. Place this file in the `data/` directory as well.
+
 ## To run
 Issue the command:
 ```
