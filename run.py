@@ -9,8 +9,6 @@ from config import get_params
 
 # parse arguments
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--model', dest='model', type=str, default='GAReader',
-        help='base model')
 parser.add_argument('--mode', dest='mode', type=int, default=0,
         help='run mode - (0-train+test, 1-train only, 2-test only, 3-val only)')
 parser.add_argument('--nlayers', dest='nlayers', type=int, default=3,
@@ -31,7 +29,7 @@ random.seed(params['seed'])
 
 # save directory
 w2v_filename = params['word2vec'].split('/')[-1].split('.')[0] if params['word2vec'] else 'None'
-save_path = ('experiments/'+params['model']+'/'+params['dataset'].split('/')[0]+
+save_path = ('experiments/'+params['dataset'].split('/')[0]+
         '_nhid%d'%params['nhidden']+'_nlayers%d'%params['nlayers']+
         '_dropout%.1f'%params['dropout']+'_%s'%w2v_filename+'_chardim%d'%params['char_dim']+
         '_train%d'%params['train_emb']+

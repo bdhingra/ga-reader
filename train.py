@@ -15,7 +15,6 @@ def main(save_path, params):
     dataset = params['dataset']
     nlayers = params['nlayers']
     train_emb = params['train_emb']
-    base_model = params['model']
     char_dim = params['char_dim']
     use_feat = params['use_feat']
     gating_fn = params['gating_fn']
@@ -34,7 +33,7 @@ def main(save_path, params):
 
     print("building network ...")
     W_init, embed_dim, = Helpers.load_word2vec_embeddings(data.dictionary[0], word2vec)
-    m = eval(base_model).Model(nlayers, data.vocab_size, data.num_chars, W_init, 
+    m = GAReader.Model(nlayers, data.vocab_size, data.num_chars, W_init, 
             nhidden, embed_dim, dropout, train_emb, 
             char_dim, use_feat, gating_fn)
 
