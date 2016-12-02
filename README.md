@@ -48,8 +48,6 @@ To set dataset specific hyperparameters modify `config.py`.
 Make sure to add `THEANO_FLAGS=device=cpu,floatX=float32` before any command if you are running on a CPU.
 
 ## Contributors
-Bhuwan Dhingra and Hanxiao Liu
-
 If you use this code please cite the following:
 
 Dhingra, B., Liu, H., Yang, Z., Cohen, W. W., & Salakhutdinov, R. (2016). Gated-Attention Readers for Text Comprehension. arXiv preprint arXiv:1606.01549.
