@@ -1,5 +1,5 @@
 # GA-Reader
-Code accompanying the paper [Gated Attention Reader for Text Comprehension](link).
+Code accompanying the paper [Gated Attention Reader for Text Comprehension](https://arxiv.org/abs/1606.01549).
 
 ## Prerequisites
 - Python 2.7
@@ -49,5 +49,17 @@ Make sure to add `THEANO_FLAGS=device=cpu,floatX=float32` before any command if 
 
 ## Contributors
 Bhuwan Dhingra and Hanxiao Liu
+
+If you use this code please cite the following:
+
+Dhingra, B., Liu, H., Yang, Z., Cohen, W. W., & Salakhutdinov, R. (2016). Gated-Attention Readers for Text Comprehension. arXiv preprint arXiv:1606.01549.
+```
+@article{dhingra2016gated,
+  title={Gated-Attention Readers for Text Comprehension},
+  author={Dhingra, Bhuwan and Liu, Hanxiao and Yang, Zhilin, and Cohen, William W and Salakhutdinov, Ruslan},
+  journal={arXiv preprint arXiv:1606.01549},
+  year={2016}
+}
+```
 
 Report bugs and missing info to bdhingraATandrewDOTcmuDOTedu (replace AT, DOT appropriately).
