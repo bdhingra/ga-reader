@@ -134,29 +134,3 @@ class MiniBatchLoader():
         self.ptr += 1
 
         return dw, dt, qw, qt, a, m_dw, m_qw, tt, tm, c, m_c, cl, fnames
-
-def unit_test(mini_batch_loader):
-    """unit test to validate MiniBatchLoader using max-frequency (exclusive).
-    The accuracy should be around 0.37 and should be invariant over different batch sizes."""
-    hits, n = 0., 0
-    for d, q, a, m_d, m_q, c, m_c in mini_batch_loader:
-        for i in xrange(len(d)):
-            prediction, max_count = -1, 0
-            for cand in c[i]:
-                count = (d[i]==cand).sum() + (q[i]==cand).sum()
-                if count > max_count and cand not in q[i]:
-                    max_count = count
-                    prediction = cand
-            n += 1
-            hits += a[i] == prediction
-        acc = hits/n
-        print acc
-
-if __name__ == '__main__':
-
-    from DataPreprocessor import *
-    
-    cnn = DataPreprocessor().preprocess("cnn/questions", no_training_set=True)
-    mini_batch_loader = MiniBatchLoader(cnn.validation, 64)
-    unit_test(mini_batch_loader)
-

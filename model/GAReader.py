@@ -204,13 +204,3 @@ class Model:
         data = L.get_all_param_values(self.network)
         with open(save_path, 'w') as f:
             pickle.dump(data, f)
-
-if __name__=="__main__":
-    m_d = np.asarray([[1,1,1,1,1,0,0,0],[1,1,1,1,1,1,1,0]]).astype('int32')
-    m_c = np.asarray([[1,1,0,0,0,0,0,0],[0,1,0,1,0,0,1,0]]).astype('int32')
-    print 'doc mask', m_d
-    print 'cand mask', m_c
-    print 'new mask (N=1)', sub_sample(m_d, m_c, 1)
-    print 'new mask (N=2)', sub_sample(m_d, m_c, 2)
-    print 'new mask (N=3)', sub_sample(m_d, m_c, 3)
-
