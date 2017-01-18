@@ -24,12 +24,11 @@ Complete list of options:
 ```
 $ python run.py --help
 Using gpu device 0: GeForce GTX TITAN X (CNMeM is disabled, cuDNN 5105)
-usage: run.py [-h] [--model MODEL] [--mode MODE] [--nlayers NLAYERS]
-              [--dataset DATASET] [--seed SEED] [--gating_fn GATING_FN]
+usage: run.py [-h] [--mode MODE] [--nlayers NLAYERS] [--dataset DATASET]
+              [--seed SEED] [--gating_fn GATING_FN]
 
 optional arguments:
   -h, --help            show this help message and exit
-  --model MODEL         base model (default: GAReader)
   --mode MODE           run mode - (0-train+test, 1-train only, 2-test only,
                         3-val only) (default: 0)
   --nlayers NLAYERS     Number of reader layers (default: 3)
