@@ -3,9 +3,9 @@ Code accompanying the paper [Gated Attention Reader for Text Comprehension](http
 
 ## Prerequisites
 - Python 2.7
-- Theano and all dependencies (latest)
-- Lasagne (latest)
-- Numpy
+- Theano (>=0.9) and all dependencies
+- Lasagne (>=0.2)
+- Numpy (>=1.12)
 - Maybe more, just use `pip install` if you get an error
 
 
